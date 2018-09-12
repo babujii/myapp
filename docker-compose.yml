@@ -1,7 +1,10 @@
-version: '3'
+version: '2'
+
 services:
-  nginx:
-    image: "babujii/docker:${TAG}"
-    container_name: nginx-dev
+  authentication:
+    image: authentication
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "8081:80"
+      - "8080:8080"
