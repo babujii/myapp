@@ -1,0 +1,7 @@
+version: '3'
+services:
+  nginx:
+    image: "yogikannan01/nginx-new:${TAG}"
+    container_name: nginx-dev
+    ports:
+      - "8081:80"
